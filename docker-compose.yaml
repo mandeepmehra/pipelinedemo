@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  jenkins:
+    image: "mandeepmehra/jenkins:latest"
+    ports:
+      - 8082:8080
+    container_name: "jenkins"
+  nexus:
+    image: "sonatype/nexus3"
+    ports:
+      - 8084:8081
+    container_name: "nexus"
+  tomcat:
+    image: "tomcat"
+    ports:
+      - 8086:8080
+    container_name: "tomcat"
+  xld:
+    image: "xebialabs/xl-docker-demo-xld"
+    ports:
+      - 4516:4516
+    container_name: "xld"
+    volumes:
+     - ./xld:/license
+  xlr:
+    image: "xebialabs/xl-docker-demo-xlr"
+    ports:
+      - 5516:5516
+    container_name: "xlr"
+    volumes:
+     - ./xlr:/license

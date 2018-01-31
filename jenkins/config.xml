@@ -13,7 +13,7 @@
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <url>/home/vagrant/spring-petclinic/.git</url>
+          <url>/var/jenkins_home/petclinic/.git</url>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches>
